@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.zwonb.hiltDemo.model.Truck
 import com.zwonb.hiltDemo.ui.main.MainFragment
+import com.zwonb.mylibrary.Lib
 import dagger.hilt.android.AndroidEntryPoint
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -18,6 +19,9 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var retrofit: Retrofit
 
+    @Inject
+    lateinit var lib: Lib
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
@@ -28,5 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         truck.deliver()
+
+        lib.justDoIt()
     }
 }

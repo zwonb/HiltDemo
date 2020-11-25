@@ -1,5 +1,6 @@
 package com.zwonb.hiltDemo.model
 
+import android.util.Log
 import javax.inject.Inject
 
 class Truck @Inject constructor(private val driver: Driver) {
@@ -14,7 +15,7 @@ class Truck @Inject constructor(private val driver: Driver) {
 
     fun deliver() {
         electricEngine.start()
-        println("Truck is delivering cargo. Driven by $driver")
+        Log.i("zwonb", "deliver: Truck is delivering cargo. Driven by $driver")
         electricEngine.shutdown()
     }
 
