@@ -1,6 +1,6 @@
 package com.zwonb.hiltDemo
 
-import com.zwonb.mylibrary.BaseApp
+import com.zwonb.hiltDemo.lib.BaseApp
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp

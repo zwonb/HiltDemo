@@ -1,4 +1,4 @@
-package com.zwonb.mylibrary
+package com.zwonb.hiltDemo.lib
 
 import android.app.Application
 

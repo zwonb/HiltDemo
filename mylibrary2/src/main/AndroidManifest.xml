@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zwonb.mylibrary2">
+    package="com.zwonb.hiltDemo">
 
+    <application>
+        <activity android:name=".lib2.Lib2Activity" />
+    </application>
 </manifest>

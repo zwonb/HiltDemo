@@ -1,13 +1,15 @@
 package com.zwonb.hiltDemo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import com.zwonb.hiltDemo.lib.Lib
+import com.zwonb.hiltDemo.lib2.Lib2
+import com.zwonb.hiltDemo.lib2.Lib2Activity
 import com.zwonb.hiltDemo.model.Truck
 import com.zwonb.hiltDemo.ui.main.MainFragment
-import com.zwonb.mylibrary.Lib
-import com.zwonb.mylibrary2.Lib2
 import dagger.hilt.android.AndroidEntryPoint
-import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import javax.inject.Inject
 
@@ -37,8 +39,12 @@ class MainActivity : AppCompatActivity() {
 
         truck.deliver()
 
-        lib.justDoIt()
+//        lib.justDoIt()
+//
+//        lib2.lib2("app call lib2")
 
-        lib2.lib2("app call lib2")
+        Handler(mainLooper).postDelayed({
+            startActivity(Intent(this, Lib2Activity::class.java))
+        }, 1000)
     }
 }

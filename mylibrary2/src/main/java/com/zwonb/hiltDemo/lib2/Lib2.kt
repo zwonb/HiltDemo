@@ -1,4 +1,4 @@
-package com.zwonb.mylibrary2
+package com.zwonb.hiltDemo.lib2
 
 import android.util.Log
 import javax.inject.Inject
