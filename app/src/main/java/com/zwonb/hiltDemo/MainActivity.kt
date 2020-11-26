@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.zwonb.hiltDemo.model.Truck
 import com.zwonb.hiltDemo.ui.main.MainFragment
 import com.zwonb.mylibrary.Lib
+import com.zwonb.mylibrary2.Lib2
 import dagger.hilt.android.AndroidEntryPoint
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -22,6 +23,9 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var lib: Lib
 
+    @Inject
+    lateinit var lib2: Lib2
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
@@ -34,5 +38,7 @@ class MainActivity : AppCompatActivity() {
         truck.deliver()
 
         lib.justDoIt()
+
+        lib2.lib2("app call lib2")
     }
 }
